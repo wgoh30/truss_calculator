@@ -84,7 +84,12 @@ class MemberForce(Force):
         self.xDirectionVector = parentNode2.xPositionVector - parentNode1.xPositionVector
         self.yDirectionVector = parentNode2.yPositionVector - parentNode1.yPositionVector 
         if self.xDirectionVector == 0:
-            self.angle = 0
+            if self.yDirectionVector > 0:
+                self.angle = pi / 2
+            elif self.yDirectionVector < 0:
+                self.angle = - pi / 2
+            else:
+                self.angle = 0
         else:
             self.angle = atan(self.yDirectionVector / self.xDirectionVector)
 
