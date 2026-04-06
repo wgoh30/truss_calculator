@@ -7,5 +7,6 @@ from turtle import *
 def turtle_setup() -> Turtle:
     turtle = Turtle(visible=False)
     color('Black')
-    speed(500)
+    speed(0)
+    colormode(255)
     return turtle
