@@ -22,11 +22,11 @@ def color_scale_setup(solvedForces: list) -> list:
         magnitudeList[iteration] /= largestForce
     for percentage in magnitudeList: # assign the color list
         colorList.append((int(red * percentage), int(green * (1 - percentage)), 0))
-    print(f'Mag: {magnitudeList}\nCol: {colorList}')
+    # print(f'Mag: {magnitudeList}\nCol: {colorList}')
     return colorList
 
 def draw_truss(turtle, forceList, solvedForces):
-    scaleFactor = 100
+    scaleFactor = 1
     hideturtle()
     colorList = color_scale_setup(solvedForces)
     for iteration in range(len(forceList)):
