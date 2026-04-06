@@ -14,11 +14,11 @@ def main() -> None:
     solvedForces = solve_axial_force(setupDict['coefficient_matrix'], setupDict['load_matrix'])
 
     turtle = turtle_setup()
-    draw_truss(turtle, setupDict['force_list'])
+    draw_truss(turtle, setupDict['force_list'], solvedForces)
 
     # print out the output
     with printoptions(suppress=True, precision=3):
         for iteration in range(len(setupDict['force_matrix'])):
-            print(f"{setupDict['force_list'][iteration].name}: {solvedForces[iteration][0]:.2f}")
+            print(f"{setupDict['force_list'][iteration].name}: {solvedForces[iteration][0]:.2f} N")
 if __name__ == "__main__":
     main()

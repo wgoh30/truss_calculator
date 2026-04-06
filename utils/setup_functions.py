@@ -110,7 +110,7 @@ def setup() -> dict:
     objectDict = define_objects() # Retrieved defined objects
     nodeList = objectDict['node_list']
     forceList = objectDict['force_list']
-    loadList = objectDict['load_lists']
+    loadList = objectDict['load_list']
 
     forceMatrix = force_matrix_setup(forceList) # Set up all the matrices
     coefficientMatrix = coefficient_matrix_setup(nodeList, forceList)
